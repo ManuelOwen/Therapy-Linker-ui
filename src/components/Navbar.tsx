@@ -26,7 +26,7 @@ function Navbar() {
         >
           {["Home", "About", "Department", "Doctors", "Contact"].map((item) => (
             <li key={item} className="cursor-pointer text-lg hover:text-cyan-400 transition">
-              <Link to={`/${item.toLowerCase()}`} onClick={() => setIsOpen(false)}>
+                 <Link to={item ==="Home" ? "/" :`/${item.toLowerCase()}`} onClick={() => setIsOpen(false)}>
                 {item}
               </Link>
             </li>

@@ -1,26 +1,46 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar"; 
+import {   RouterProvider } from "react-router-dom";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Department from "./pages/Department";
 import Doctors from "./pages/Doctors";
 import Contact from "./pages/Contact";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
+import Error from "./pages/Error";
+import { createBrowserRouter } from "react-router-dom";
 
-function App() {
-  return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/department" element={<Department />} />
-        <Route path="/doctors" element={<Doctors />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
-    </Router>
-  );
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    errorElement:<Error/>
+  },
+  {
+    path: "/about",
+    element: <About />,
+    errorElement:<Error/>
+  },
+  {
+    path: "/department",
+    element: <Department />,
+    errorElement:<Error/>
+
+  },
+  {
+    path: "/doctors",
+    element: <Doctors />,
+    errorElement:<Error/>
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
+    errorElement:<Error/>
+  },
+
+]);
+function App(){
+  return<RouterProvider router={router}/>
 }
-
 export default App;
+
+

@@ -1,20 +1,20 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 
-export interface departments {
+export interface Doctor {
     id: number;
-    department_name: string;
-    department: string;
+    name: string;
+    department_id: string;
     image_url: string;
     description: string;
-    icon: string;
+    position: string;
 }
-export const  departmentsApi = createApi({
+export const  doctorsApi = createApi({
     // fetch doctors from database
-    reducerPath: "deprtmentsApi",
+    reducerPath: "doctorsApi",
     baseQuery: fetchBaseQuery({baseUrl: "http://localhost:8000/api/"}),
     endpoints:(builder)=>({
-        getDepartments:builder.query({
-            query:()=>`department`,
+        getDoctors:builder.query({
+            query:()=>`doctor`,
         })
     })
 });
