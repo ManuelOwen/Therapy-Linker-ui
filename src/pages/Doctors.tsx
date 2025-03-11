@@ -38,6 +38,9 @@ const Doctors = () => {
   if (error) {
     return <div className="text-center text-red-500 mt-20">Error Loading Doctors</div>;
   }
+  const handleClick = () => {
+    window.location.href = "/appointment";
+  }
 
   // Use API data or fallback to static data
   const doctors = doctorsData || staticDoctors;
@@ -64,8 +67,12 @@ const Doctors = () => {
                 <div className="p-4 text-center">
                   <h3 className="text-lg font-semibold text-gray-800">{doctor.name}</h3>
                   <p className="text-gray-500">{doctor.position}</p>
+                  <button onClick={handleClick} className="bg-teal-300 text-white font-medium px-4 py-3 mt-6 rounded-md hover:bg-teal-400 transition">
+          Make Appointment
+        </button>
                 </div>
               </div>
+              
             ))}
           </div>
         </div>

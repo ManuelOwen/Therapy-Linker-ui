@@ -33,9 +33,9 @@ function Navbar() {
           ))}
           {/* Button */}
           <li>
-            <button className="bg-teal-300 text-white font-medium px-5 py-2 rounded-md hover:bg-teal-400 transition">
+            {/* <button className="bg-teal-300 text-white font-medium px-5 py-2 rounded-md hover:bg-teal-400 transition">
               Make Appointment
-            </button>
+            </button> */}
           </li>
         </ul>
       </div>
