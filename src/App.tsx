@@ -6,6 +6,7 @@ import Department from "./pages/Department";
 import Doctors from "./pages/Doctors";
 import Contact from "./pages/Contact";
 import AppointmentForm from "./pages/appointment";
+import SignupPage from "./pages/signup";
 // import Footer from "./components/Footer";
 import Error from "./pages/Error";
 import { createBrowserRouter } from "react-router-dom";
@@ -17,8 +18,13 @@ export const router = createBrowserRouter([
     errorElement:<Error/>
   },
   {
-    path: "/appointment",
+    path: "/appointment/:category/:name",
     element: <AppointmentForm />,
+    errorElement:<Error/>
+  },
+  {
+    path:'/signup',
+    element:<SignupPage/>,
     errorElement:<Error/>
   },
   {

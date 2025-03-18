@@ -24,7 +24,7 @@ function Navbar() {
             isOpen ? "top-14 opacity-100" : "-top-96 opacity-0 md:opacity-100"
           } md:opacity-100 md:flex-row flex-col md:space-x-6 space-y-4 md:space-y-0 text-center md:text-left`}
         >
-          {["Home", "About", "Department", "Doctors", "Contact"].map((item) => (
+          {["Home", "About", "Department", "Doctors", "Contact", "Dashboard"].map((item) => (
             <li key={item} className="cursor-pointer text-lg hover:text-cyan-400 transition">
                  <Link to={item ==="Home" ? "/" :`/${item.toLowerCase()}`} onClick={() => setIsOpen(false)}>
                 {item}

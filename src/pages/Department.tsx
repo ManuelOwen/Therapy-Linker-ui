@@ -55,8 +55,8 @@ const Departments: React.FC = () => {
     const iconsArray = Object.values(iconList);
     return iconsArray[Math.floor(Math.random() * iconsArray.length)];
   };
-  const handleClick = () => {
-    window.location.href = "/appointment";
+  const handleClick = (departmentName : String) => {
+    window.location.href = `/appointment/departments/${departmentName}`;
   };
 
   return (
@@ -82,7 +82,7 @@ const Departments: React.FC = () => {
               </div>
 
               <p className="text-gray-600 mt-2">{department.description || "No description available."}</p>
-              <button  onClick={handleClick} className="bg-teal-300 text-white font-medium px-4 py-3 mt-6 rounded-md hover:bg-teal-400 transition">
+              <button  onClick={() => handleClick(department.department_name)} className="bg-teal-300 text-white font-medium px-4 py-3 mt-6 rounded-md hover:bg-teal-400 transition">
           Make Appointment
         </button>
             </div>

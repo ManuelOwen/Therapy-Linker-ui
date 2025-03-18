@@ -16,9 +16,10 @@ function Home() {
   ];
 
   // Fix handleClick function
-  const handleClick = () => {
-    navigate("/about"); // Navigate to the about page
+  const handleClick  = () => {
+    navigate("/signup"); // Navigate to the signup page to create account
   };
+ 
 
   return (
     <>
@@ -42,7 +43,7 @@ function Home() {
               onClick={handleClick} 
               className="mt-6 bg-teal-400 hover:bg-teal-500 text-white font-semibold py-2 px-5 rounded-md transition duration-300 cursor-pointer"
             >
-              Read More
+            Create Account
             </button>
           </div>
 
